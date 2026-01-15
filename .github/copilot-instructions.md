@@ -3,6 +3,11 @@
 ## Project Overview
 A React TypeScript GIF search application built with Vite and SWC. The app displays searchable GIFs with recent search history tracking. Currently uses mock data but is structured to integrate with a real API.
 
+## Developer Context
+**Learning Profile:** First-time React developer coming from Angular background. When explaining React concepts, please draw parallels to Angular equivalents (e.g., components, hooks vs services/lifecycle, props vs @Input, etc.) to facilitate understanding.
+
+**Interaction Style:** If you need more context about requirements, architecture decisions, or existing code before providing a solution, please ask clarifying questions rather than making assumptions.
+
 ## Architecture
 
 ### Component Hierarchy

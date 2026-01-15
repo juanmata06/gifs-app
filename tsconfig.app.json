@@ -8,6 +8,15 @@
     "types": ["vite/client"],
     "skipLibCheck": true,
 
+    /* Path aliases */
+    "baseUrl": ".",
+    "paths": {
+      "@interfaces": ["src/interfaces"],
+      "@components": ["src/components"],
+      "@actions": ["src/actions"],
+      "@mock-data": ["src/mock-data"],
+    },
+
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
