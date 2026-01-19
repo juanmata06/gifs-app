@@ -1,9 +1,3 @@
-import { useState } from "react";
-
-import type { Gif } from "@interfaces";
-
-import { getGifsByQueryAction } from "@actions";
-
 import {
 	CustomHeader,
 	CustomSearchBar,
@@ -11,22 +5,15 @@ import {
 	RecentSearches,
 } from "@components";
 
+import { UseGifs } from "./useGifs";
+
 export const GifsApp = () => {
-	const [gifs, setGifs] = useState<Gif[]>([]);
-	const [previousSearches, setPreviousSearches] = useState<string[]>([]);
-
-	const handleSearchClicked = (newSearch: string) => {
-		console.log({ newSearch });
-	};
-
-	const handleSearch = async (query: string) => {
-		const cleanedQuery = query.trim().toLowerCase();
-		if (cleanedQuery.length === 0) return;
-		if (previousSearches.includes(query)) return;
-		setPreviousSearches([query, ...previousSearches].splice(0, 3));
-		const gifs = await getGifsByQueryAction(cleanedQuery);
-		setGifs(gifs);
-	};
+	const {
+		handleSearch,
+		previousSearches,
+		handleSearchClicked,
+		gifs,
+	} = UseGifs();
 
 	return (
 		<>
