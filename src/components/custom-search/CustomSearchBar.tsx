@@ -1,4 +1,8 @@
-import { useEffect, useState, type FC } from "react";
+import {
+	// useEffect,
+	useState,
+	type FC,
+} from "react";
 
 interface Props {
 	onQuerySearch: (query: string) => void;
@@ -12,7 +16,7 @@ export const CustomSearchBar: FC<Props> = ({ onQuerySearch }) => {
 	// 	const timeoutId = setTimeout(() => {
 	// 		onQuerySearch(query);
 	// 	}, 700);
-		
+
 	// 	return () => {
 	// 		clearTimeout(timeoutId);
 	// 	};
